@@ -1,0 +1,186 @@
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.content-wrapper {
+    width: 600px;
+}
+
+.search-header {
+    border-radius:  8px 8px 0 0;
+    height: 200px;
+    background-color: #112948;
+    display: flex;
+    flex-direction: column;
+
+    .search-header-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 153px;
+        padding: 0 42px;
+
+        .user-section{
+            .user-level {
+                background-color: #1E3554;
+                border-radius: 8px;
+                text-align: center;
+            }
+        }
+
+        .user-name{
+            margin-top: 0;
+            margin-left: 20px;
+        }
+    }
+
+    .profile-nav {
+        height: 47px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+        border-top: 1px solid #1E3554;
+
+        div {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.search, .fav-teams {
+    color: #1A3150;
+    background-color: white;
+
+    .search-wrapper, .fav-teams-wrapper {
+        padding: 10px 20px;
+    }
+
+    .search-title, .fav-teams-title {
+        text-transform: uppercase;
+    }
+
+    .search-form {
+        position: relative;
+        margin-bottom: 10px;
+
+        input {
+            background-color: #F5F7F9;
+            border: none;
+            border-radius: 80px;
+            font-size: 12px;
+            outline: none;
+            padding: 13px 13px 12px 35px;
+            width: 90%
+        }
+
+        i {
+            &.icon-search {
+                color: #00B1FF;
+                padding: 5px;
+                position: absolute;
+                left: 8px;
+                top: 6px;
+            }
+
+            &.icon-close {
+                color: #98ACC1;
+                padding: 5px;
+                position: absolute;
+                right: 16px;
+                top: 6px;
+                display: none;
+            }
+        }
+    }
+
+    .search-results, .fav-teams-results {
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    padding: 10px;
+                    flex: 0 0 auto;
+                }
+
+                .btn-follow {
+                    flex: 0 0 auto;
+                }
+
+                .team-info {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 10px;
+
+                    .team-leagues {
+                        color: #6F8CAA;
+                        font-size: 11px;
+
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .team {
+                        margin-top: 5px;
+                        p {
+                            margin: 5px 5px 0 0;
+                            display: inline;
+                        }
+
+                        &-name {
+                            color: #1A3150;
+                            font-size: 14px;
+                            border-right: 1px solid #6F8CAA;
+                            padding-right: 5px;
+                        }
+
+                        &-stadium {
+                            color: #6F8CAA;
+                            font-size: 12px;
+                        }
+
+                        .img-stadium {
+                            width: 14px;
+                            height: 13px;
+                            padding: 0 4px 0 0;
+                        }
+                    }
+                }
+
+                .btn-follow {
+                    width: 86px;
+                    height: 32px;
+                    color: white;
+                    background-color: #00B1FF;
+                    border-radius: 200px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    cursor: pointer;
+                    border: 0;
+
+                    &:hover {
+                        background-color: white;
+                        color: #00B1FF;
+                        border: 1px solid #00B1FF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fav-teams {
+    margin-top: 10px;
+}
