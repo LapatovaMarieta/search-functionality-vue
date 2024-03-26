@@ -30,7 +30,6 @@ const store = createStore({
       try {
         // const response = await fetch('/api');
         // const data = await response.json();
-        //const data = require('../../data/teams.json');
         commit('SET_TEAMS', data.football_teams);
       } catch (error) {
         console.error('Error fetching teams:', error);

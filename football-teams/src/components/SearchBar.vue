@@ -98,6 +98,9 @@
             highlightedIndex: -1,
         };
     },
+    mounted() {
+        this.$store.dispatch('fetchTeams');
+    },
     computed: {
         teams() {
             return this.$store.state.teams;
@@ -146,14 +149,11 @@
                     break;
             }
         },
-        highlightMatch(name) {
+        highlightMatch(letters) {
             const query = this.searchQuery.toLowerCase();
             const regex = new RegExp(`(^${query})`, 'gi');
-            return name.replace(regex, '<span class="highlighted-letters">$1</span>');
+            return letters.replace(regex, '<span class="highlighted-letters">$1</span>');
         },
-    },
-    mounted() {
-        this.$store.dispatch('fetchTeams');
     },
   }
 </script>
