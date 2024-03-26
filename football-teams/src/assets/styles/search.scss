@@ -1,103 +1,156 @@
-.search-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
+@import "./colors.scss";
 
-.content-wrapper {
-    width: 600px;
-}
-
-.search-header {
-    border-radius:  8px 8px 0 0;
-    height: 200px;
-    background-color: #112948;
-    display: flex;
-    flex-direction: column;
-
-    .search-header-container {
+.search {
+    &-container {
+        flex: 1;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 153px;
-        padding: 0 42px;
+        justify-content: center;
+        margin-top: 20px;
 
-        .user-section{
-            .user-level {
-                background-color: #1E3554;
-                border-radius: 8px;
-                text-align: center;
+        @media only screen and (max-width: 375px) {
+            margin-top: 0;
+        }
+    }
+
+    &-content-wrapper {
+        width: 600px;
+    }
+
+    &-header {
+        border-radius:  8px 8px 0 0;
+        height: 200px;
+        background-color: $dark-blue2;
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (max-width: 375px) {
+            border-top: 1px solid $dark-blue1;
+            border-radius: 0;
+        }
+    
+        &-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 153px;
+            padding: 0 42px;
+
+            @media only screen and (max-width: 375px) {
+                justify-content: center;
+            }
+    
+            .user {
+                &-level {
+                    background-color: $dark-blue1;
+                    border-radius: 8px;
+                    text-align: center;
+                    font-size: 10px;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                }
+    
+                &-name {
+                    margin-top: 0;
+                    margin-left: 20px;
+                    font-family: "Montserrat", sans-serif;
+                    font-style: italic;
+                    font-weight: 700;
+
+                    @media only screen and (max-width: 375px) {
+                        display: none;
+                    }
+                }
             }
         }
+    
+        .profile-nav {
+            height: 47px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+            border-top: 1px solid $dark-blue1;
+    
+            div {
+                text-transform: uppercase;
+                font-size: 11px;
+                font-family: "Roboto", sans-serif;
+                font-weight: 500;
+                color: $grey5;
 
-        .user-name{
-            margin-top: 0;
-            margin-left: 20px;
+                &.active {
+                    color: $white;
+                }
+            }
         }
     }
 
-    .profile-nav {
-        height: 47px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        column-gap: 20px;
-        border-top: 1px solid #1E3554;
+    &-body {
+        color: $dark-blue3;
+        background-color: $white;
 
-        div {
-            text-transform: uppercase;
+        @media only screen and (max-width: 375px) {
+            margin-top: 10px;
+        }
+
+        &-wrapper {
+            padding: 5px 15px;
         }
     }
-}
 
-.search, .fav-teams {
-    color: #1A3150;
-    background-color: white;
-
-    .search-wrapper, .fav-teams-wrapper {
-        padding: 10px 20px;
-    }
-
-    .search-title, .fav-teams-title {
+    &-title {
+        margin-top: 10px;
         text-transform: uppercase;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        font-style: italic;
+        font-weight: 700;
     }
 
-    .search-form {
+    &-form {
         position: relative;
         margin-bottom: 10px;
 
         input {
-            background-color: #F5F7F9;
+            background-color: $grey1;
             border: none;
             border-radius: 80px;
-            font-size: 12px;
             outline: none;
             padding: 13px 13px 12px 35px;
-            width: 90%
+            width: 90%;
+            font-size: 13px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+
+            @media only screen and (max-width: 375px) {
+                width: 85%;
+            }
         }
 
-        i {
-            &.icon-search {
-                color: #00B1FF;
+        .icon{
+            &-search {
+                color: $blue;
                 padding: 5px;
                 position: absolute;
                 left: 8px;
                 top: 6px;
             }
-
-            &.icon-close {
-                color: #98ACC1;
+    
+            &-close {
+                color: $grey6;
                 padding: 5px;
                 position: absolute;
                 right: 16px;
                 top: 6px;
-                display: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
 
-    .search-results, .fav-teams-results {
+    &-results {
         ul {
             margin-left: 0;
             padding-left: 0;
@@ -106,33 +159,45 @@
                 display: flex;
                 align-items: center;
 
-                img {
-                    width: 30px;
-                    height: 30px;
-                    padding: 10px;
-                    flex: 0 0 auto;
+                &:focus-visible {
+                    outline: none;
                 }
 
-                .btn-follow {
-                    flex: 0 0 auto;
+                &.highlighted {
+                    background-color: $grey1;
                 }
 
-                .team-info {
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    margin-left: 10px;
+                .team {
+                    &-placeholder-img {
+                        width: 30px;
+                        height: 30px;
+                        padding: 10px;
+                        flex: 0 0 auto;
 
-                    .team-leagues {
-                        color: #6F8CAA;
+                        @media only screen and (max-width: 375px) {
+                            padding: 10px 0;
+                        }
+                    }
+
+                    &-info-wrapper {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 10px;
+                    }
+
+                    &-leagues {
+                        color: $grey5;
                         font-size: 11px;
+                        font-family: "Roboto", sans-serif;
+                        font-weight: 400;
 
                         p {
                             margin-bottom: 0;
                         }
                     }
 
-                    .team {
+                    &-info {
                         margin-top: 5px;
                         p {
                             margin: 5px 5px 0 0;
@@ -140,47 +205,158 @@
                         }
 
                         &-name {
-                            color: #1A3150;
-                            font-size: 14px;
-                            border-right: 1px solid #6F8CAA;
+                            color: $dark-blue3;
+                            border-right: 1px solid $grey5;
                             padding-right: 5px;
+                            font-size: 14px;
+                            font-family: "Roboto", sans-serif;
+                            font-weight: 700;
                         }
 
                         &-stadium {
-                            color: #6F8CAA;
+                            color: $grey5;
                             font-size: 12px;
+                            font-family: "Roboto", sans-serif;
+                            font-weight: 400;
+
+                            &-img {
+                                width: 14px;
+                                height: 13px;
+                                padding: 0 4px 0 0;
+                            }
                         }
 
-                        .img-stadium {
-                            width: 14px;
-                            height: 13px;
-                            padding: 0 4px 0 0;
+                        .highlighted-letters {
+                            color: $blue; 
                         }
                     }
                 }
 
                 .btn-follow {
-                    width: 86px;
+                    flex: 0 0 auto;
+                    width: auto;
                     height: 32px;
-                    color: white;
-                    background-color: #00B1FF;
+                    color: $white;
+                    background-color: $blue;
                     border-radius: 200px;
                     text-transform: uppercase;
                     text-align: center;
                     cursor: pointer;
                     border: 0;
+                    margin-right: 10px;
+                    padding: 0 15px;
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 500;
+                    font-size: 12px;
 
-                    &:hover {
-                        background-color: white;
-                        color: #00B1FF;
-                        border: 1px solid #00B1FF;
+                    @media only screen and (max-width: 375px) {
+                        margin-right: 0;
+                        padding: 0 8px;
+                    }
+
+                    &.following {
+                        background-color: $white;
+                        color: $blue;
+                        border: 1px solid $blue;
                     }
                 }
             }
         }
     }
+
+    &-no-results {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+            text-align: center;
+            color: $grey5;
+            font-size: 12px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+        }
+
+        img {
+            text-align: center;
+            height: 78px;
+        }
+    }
 }
 
 .fav-teams {
+    color: $dark-blue3;
+    background-color: $white;
     margin-top: 10px;
+    border-radius: 0 0 8px 8px;
+
+    &-wrapper {
+        padding: 5px 15px;
+        
+        @media only screen and (max-width: 375px) {
+            padding: 5px 15px;
+        }
+    }
+
+    &-title {
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    &-results {
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                .team {
+                    &-content {
+                        margin-left: 10px;
+                    }
+
+                    &-placeholder-img {
+                        width: 30px;
+                        height: 30px;
+                        padding: 10px;
+                        flex: 0 0 auto;
+
+                        @media only screen and (max-width: 375px) {
+                            padding: 10px 0;
+                        }
+                    }
+
+                    &-name {
+                        color: $dark-blue3;
+                        padding-right: 5px;
+                        font-size: 14px;
+                        font-family: "Roboto", sans-serif;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    &-no-results {
+        height: 90px;
+        background-color: $grey1;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-message {
+            color: $grey5;
+            font-size: 12px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+        }
+    }
 }

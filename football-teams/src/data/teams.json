@@ -1,0 +1,104 @@
+{
+    "football_teams": [
+        {
+            "id": 1,
+            "name": "Manchester United",
+            "stadium": "Old Trafford",
+            "leagues": [
+                "Premier League",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        },
+        {
+            "id": 2,
+            "name": "Real Madrid",
+            "stadium": "Santiago Bernabéu",
+            "leagues": [
+                "La Liga",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        },
+        {
+            "id": 3,
+            "name": "FC Bayern Munich",
+            "stadium": "Allianz Arena",
+            "leagues": [
+                "Bundesliga",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        },
+        {
+            "id": 4,
+            "name": "FC Barcelona",
+            "stadium": "Camp Nou",
+            "leagues": [
+                "La Liga",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        },
+        {
+            "id": 5,
+            "name": "Liverpool FC",
+            "stadium": "Anfield",
+            "leagues": [
+                "Premier League",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        },
+        {
+            "id": 6,
+            "name": "Juventus",
+            "stadium": "Allianz Stadium",
+            "leagues": [
+                "Serie A",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        },
+        {
+            "id": 7,
+            "name": "Paris Saint-Germain",
+            "stadium": "Parc des Princes",
+            "leagues": [
+                "Ligue 1",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        },
+        {
+            "id": 8,
+            "name": "Chelsea FC",
+            "stadium": "Stamford Bridge",
+            "leagues": [
+                "Premier League",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        },
+        {
+            "id": 9,
+            "name": "AC Milan",
+            "stadium": "San Siro",
+            "leagues": [
+                "Serie A",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        },
+        {
+            "id": 10,
+            "name": "Manchester City",
+            "stadium": "Etihad Stadium",
+            "leagues": [
+                "Premier League",
+                "UEFA Champions League"
+            ],
+            "is_following": false
+        }
+    ]
+}

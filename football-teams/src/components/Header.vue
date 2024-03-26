@@ -1,6 +1,6 @@
 <template>
-    <header id="header-desktop" class="header">
-        <div class="container">
+    <header class="header">
+        <div class="header-container">
             <div class="header-wrap">
                 <div>
                     <img src="../assets/img/arrow-left.svg" alt="arrow-left" class="left-arrow">
