@@ -1,19 +1,19 @@
 
 <template>
   <div class="page">
-    <Header />
+    <PageHeader />
     <SearchBar />
 </div>
 </template>
 
 <script >
-  import Header from './components/Header.vue';
+  import PageHeader from './components/PageHeader.vue';
   import SearchBar from './components/SearchBar.vue';
   import './assets/styles/main.scss'
 
   export default {
     name: 'App',
-    components: {Header, SearchBar},
+    components: {PageHeader, SearchBar},
   }
 </script>
 
